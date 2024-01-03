@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "check": "astro check",
+    "ci:setup-vercel": "vercel pull --yes --environment production --token \"$VERCEL_TOKEN\"",
+    "ci:deploy": "vercel deploy --prebuilt --prod --token \"$VERCEL_TOKEN\""
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
